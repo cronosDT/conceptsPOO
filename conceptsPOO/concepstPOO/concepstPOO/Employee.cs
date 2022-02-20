@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace concepstPOO
+﻿namespace concepstPOO
 {
-    public abstract class Employee
+    public abstract class Employee : IPay
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -15,13 +9,10 @@ namespace concepstPOO
         public Date BirthDate { get; set; }
         public Date HiringDate { get; set; }
 
-        public abstract decimal GetValueToPay   ();
+        public abstract decimal GetValueToPay();
         public override string ToString()
         {
-            return $"\n\t{Id} - {FirstName} {LastName} " +
-                $"\n\tBirth: {BirthDate:00} " +
-                $"\n\tHiring: {HiringDate:00} " +
-                $"\n\tIs active: {IsActive}";
+            return $"\n\t{Id} - {FirstName} {LastName}, Birth: {BirthDate:00}, Hiring: {HiringDate:00}, Is active: {IsActive}";
         }
 
     }

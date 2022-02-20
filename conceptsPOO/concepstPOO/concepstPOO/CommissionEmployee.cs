@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace concepstPOO
+﻿namespace concepstPOO
 {
     public class CommissionEmployee : Employee
     {
@@ -19,9 +13,9 @@ namespace concepstPOO
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tCommision percentaje: {$"{CommissionPercentaje:p2}", 15}" +
-                $"\n\tSales...............: {$"{Sale:c2}" ,15}" +
-                $"\n\tValue to pay........: {$"{GetValueToPay():c2}" ,15}";
+                $"\n\tCommision percentaje: {$"{CommissionPercentaje:p2}",18}" +
+                $"\n\tSales...............: {$"{Sale:c2}",18}" +
+                $"\n\tValue to pay........: {$"{GetValueToPay():c2}",18 }";
 
         }
 
