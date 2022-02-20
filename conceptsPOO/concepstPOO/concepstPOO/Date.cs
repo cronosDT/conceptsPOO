@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace concepstPOO
+﻿namespace concepstPOO
 {
     public class Date
     {
@@ -13,7 +7,7 @@ namespace concepstPOO
         private int _day;
 
         public Date(int year, int month, int day)
-        { 
+        {
             _year = year;
             _month = CheckMonth(month);
             _day = CheckDay(day, month, year);
@@ -21,12 +15,12 @@ namespace concepstPOO
 
         private int CheckDay(int day, int month, int year)
         {
-            if(month == 2 && day == 29 && IsLeapYear(year))
+            if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 return day;
             }
 
-            int[] daysForMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+            int[] daysForMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
             if (day >= 1 && day <= daysForMonth[month])
             {
